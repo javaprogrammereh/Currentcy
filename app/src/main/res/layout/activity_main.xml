@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/back">
+    <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/shape_imgconvert"-->
+        <!--android:elevation="5dp"-->
+        <!--android:layout_gravity="center|right"-->
+        <!--android:layout_margin="16dp">-->
+        <!--<ImageView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:background="@drawable/ic_convert" />-->
+    <!--</RelativeLayout>-->
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="تبدیلش کن !"
+        android:id="@+id/btn_convert"
+        android:textStyle="bold"
+        android:translationZ="3dp"
+        android:layout_gravity="center"
+        android:textColor="@color/color_white"
+        android:background="@drawable/shape_btnok"/>
+
+
+
+    //body
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        //section top
+        <RelativeLayout
+            android:id="@+id/rel_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            //text title
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency "
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/color_white"
+                android:textSize="35sp"
+                android:id="@+id/txt1"
+                android:layout_centerHorizontal="true"/>
+            //Linear center
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/lnr_convert"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layoutDirection="ltr">
+
+
+
+                //linear spinner
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="6dp"
+                    android:layout_weight="2"
+                    android:layout_gravity="right"
+                    android:gravity="right">
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:textAlignment="center">
+
+                        <Spinner
+                            android:id="@+id/spin_first"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textAlignment="center"
+                            android:background="@android:color/transparent"
+                            android:gravity="right"
+                            android:layout_marginLeft="5dp"
+                            android:verticalScrollbarPosition="left"
+                            android:spinnerMode="dropdown"
+                            android:popupBackground="@color/back_spin"/>
+
+                        <ImageView
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="16dp"
+                             android:background="@drawable/triangle1"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                //linear edt_text
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom">
+                    <EditText
+                        android:id="@+id/edt_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="0"
+                        android:textAlignment="center"
+                        android:textColorHint="@color/color_white"
+                        android:inputType="number|text"
+                        android:gravity="bottom"
+                        android:textSize="30sp"
+                        android:layout_weight="1"
+                        android:maxLength="15"
+                        android:padding="16dp"
+                        android:textColor="@color/color_white"
+                        android:background="@drawable/shape_txt3"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        //section bottom
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rel_top"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="نمایش تبدیل"
+                android:textColorHint="@color/color"
+                android:textSize="30sp"
+                android:textColor="@color/color"
+                android:layout_margin="44dp"
+                android:background="@drawable/shape_txt"
+                android:id="@+id/btn_return"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مجموعه ی نرم افزاری آلفا"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/color"
+                android:id="@+id/alpha"
+                android:textSize="12sp"
+                android:layout_margin="16dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>
